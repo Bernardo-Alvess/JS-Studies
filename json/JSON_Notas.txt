@@ -4,6 +4,7 @@ JSON = JavaScript Object Notation
 - Usado em APIs e Configs
 - Leve e fácil de escrever/ler
 - Fácilmente integrado com outras linguagens de programação
+- Contém apenas dados, não é possível armazenar métodos nele
 
 JSON tipos
 
@@ -14,7 +15,22 @@ JSON tipos
 - Arrays = [1, 2, 3], ["Hello", "World"]
 - Objetos = {"chave" : "valor"}, {"idade" : 19}
 
-//Tipos de inicialização
+Tipos de inicialização
 
 {} = inicia um objetos 
 [] = inicia uma array
+
+# Chamando um JSON externo
+
+É necessário obter o link para o arquivo
+EX: var jsonUrl = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+
+usando o objeto XMLHttpRequest criaremos uma nova instância dele
+EX: var request = new XMLHttpRequest();
+
+Solicitamos o arquivo
+EX: request.open('GET', jsonURL); - Aqui se usa o GET pois estamos chamando os dados que serão usados
+
+Logo em seguida informamos qual tipo de arquivo foi chamado e em seguida enviamos
+EX: request.responseType = 'json';
+request.send();

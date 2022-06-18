@@ -5,12 +5,12 @@
     "hobbies" : ["skate", "video games"],
     "friends" : [{
         "name": "Vitor",
-        "favoriteNumber" : 420,
+        "favoriteNumber" : 10,
         "isProgrammer" : true,
         "hobbies" : ["vava", "cs"]
     },{
         "name": "Brayan",
-        "favoriteNumber" : 69,
+        "favoriteNumber" : 20,
         "isProgrammer" : true,
         "hobbies" : ["nada", "juintar monster"]
     }]

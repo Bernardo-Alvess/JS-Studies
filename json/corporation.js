@@ -1,4 +1,4 @@
-[
+let teste = [
     {
         "name": "Casa da Lavoura",
         "numberOfEmployees": 17,
@@ -12,3 +12,14 @@
         "rating": 2
     }
 ]
+
+let requestUrl = 'user.json'
+let request = new XMLHttpRequest();
+request.open('GET', requestUrl);
+request.responseType = 'json'
+request.send();
+
+request.onload = function(){
+    let user = request.response;
+    console.log(user.name)
+}
