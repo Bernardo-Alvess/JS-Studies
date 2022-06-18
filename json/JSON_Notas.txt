@@ -1,0 +1,20 @@
+JSON = JavaScript Object Notation
+
+- Formato de representação de dados
+- Usado em APIs e Configs
+- Leve e fácil de escrever/ler
+- Fácilmente integrado com outras linguagens de programação
+
+JSON tipos
+
+- Strings = "Hello, World!"
+- Números = 10
+- Booleans = true
+- null = null
+- Arrays = [1, 2, 3], ["Hello", "World"]
+- Objetos = {"chave" : "valor"}, {"idade" : 19}
+
+//Tipos de inicialização
+
+{} = inicia um objetos 
+[] = inicia uma array

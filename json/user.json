@@ -1,0 +1,17 @@
+{
+    "name": "Bernardo",
+    "favoriteNumber" : 8,
+    "isProgrammer" : true,
+    "hobbies" : ["skate", "video games"],
+    "friends" : [{
+        "name": "Vitor",
+        "favoriteNumber" : 420,
+        "isProgrammer" : true,
+        "hobbies" : ["vava", "cs"]
+    },{
+        "name": "Brayan",
+        "favoriteNumber" : 69,
+        "isProgrammer" : true,
+        "hobbies" : ["nada", "juintar monster"]
+    }]
+}
