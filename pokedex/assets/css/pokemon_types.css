@@ -1,0 +1,73 @@
+/* Normal, Fire, Water, Grass, Flying, Fighting, Poison, Electric, Ground, Rock, Psychic, Ice, Bug, Ghost, Steel, Dragon, Dark and Fairy */
+
+.bug{
+    background-color: #8CD91A;
+}
+
+.dark{
+    background-color: #1A2029;
+}
+
+.dragon{
+    background-color: aquamarine;
+}
+
+.electric{
+    background-color: goldenrod;
+}
+
+.fairy{
+    background-color: pink;
+}
+
+.fighting{
+    background-color: brown;
+}
+
+.fire{
+    background-color: #A80221;
+}
+
+.flying{
+    background-color: beige;
+}
+
+.ghost{
+    background-color: darkgrey;
+}
+
+.grass{
+    background-color: #2E5902;
+}
+
+.ground{
+    background-color: burlywood;
+}
+
+.ice{
+    background-color: mediumseagreen;
+}
+
+.normal{
+    background-color: gray;
+}
+
+.poison{
+    background-color: purple;
+}
+
+.psychic{
+    background-color: palevioletred;
+}
+
+.rock{
+    background-color: chocolate;
+}
+
+.steel{
+    background-color: steelblue;
+}
+
+.water{
+    background-color: #0187D9;
+}
