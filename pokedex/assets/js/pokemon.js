@@ -25,7 +25,7 @@ async function getPokemon(id){
 
 async function createPokemon(){
     //Loop para receber todos os pokémons de primeira geração;
-    for(let i = 1; i < 25; i++){
+    for(let i = 1; i < 152; i++){
         const pokemon = await getPokemon(i);
 
         //criando elementos html
@@ -54,22 +54,44 @@ async function createPokemon(){
         document.getElementById('pokedex-selector').appendChild(pokemonContainerDiv);
     }
 
+    getDivs();
 }
 
 createPokemon();
 
 
-const pokemonDivArr = document.getElementsByClassName('pokemon-container');
+function getDivs(){
+    
+    const pokemonDivArr = document.getElementsByClassName('pokemon-container');
 
-for(let i = 0; i < pokemonDivArr.length; i++){
-    pokemonDivArr[i].addEventListener('click', () =>{
-        alert(pokemonDivArr[i]);
-    })
+    for(let i = 0; i < pokemonDivArr.length; i++){
+        pokemonDivArr[i].addEventListener('click', getSpecificPokemon)
+    }
 }
 
-async function showPokemonStats(x){
-    const pokemonId = document.getElementsByClassName('pokemon-container')[x].id;
-    const pokemon = await getPokemon(pokemonId);
-
-    console.log(pokemon.name);
+async function getSpecificPokemon(){
+    const id = this.id;
+    const pokemon = await getPokemon(id);
+    showSelectedPokemon(pokemon.name, pokemon.sprite, [pokemon.attack, pokemon.defense], pokemon.type)
 }
+
+function showSelectedPokemon(name, sprite, stats, type){
+
+    const div = 
+    `<div class="pokemon-selected-screen">
+        <div class="selected-name-div">
+            <h1 class="pokemon-selected-name">${name}</h1>
+            <p>${type}</p>
+        </div>
+        <img src="${sprite}" alt="${name}" class="pokemon-selected-img">
+        <div class="pokemon-selected-stats">
+            <p>Attack: ${stats[0]}</p>
+            <p>Defense: ${stats[1]}</p>
+        </div>
+        
+    </div>`;
+
+    const pokedexScreen = document.getElementById('pokedex-screen');
+    pokedexScreen.innerHTML = div;
+}
+

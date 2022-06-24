@@ -1,0 +1,5 @@
+Obter os dados criminais de Atlanta
+Contar quantos crimes ocorreram a cada ano
+    separar cada linha em uma array
+    atribuir +1 crime ao ano especificado dentro daquela array;
+mostrar tudo em um grafico
