@@ -14,6 +14,7 @@
   "author": "Bernardo Alves",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "nodemon": "^2.0.18"
   }
 }
