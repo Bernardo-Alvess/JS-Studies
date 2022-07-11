@@ -13,19 +13,34 @@
 <body>
     <header>
         <img src="assets/imgs/pokedex150.png" alt="">
+        <input type="text" placeholder="search" id="pokemon-dedicated-search">
+        <button onclick="loadPokemonPage()">search</button>
     </header>
     <main>
         <div class="pokedex">
             <div class="inner-pokedex">
+                <div class="top-pokedex-screen">
+                    <div class="camera"></div>
+                    <div class="three-cameras">
+                        <div class="red"></div>
+                        <div class="blue"></div>
+                        <div class="yellow"></div>
+                    </div>
+                </div>
                 <div class="pokedex-screen" id="pokedex-screen">
                 </div>
             </div>
-            <div class="pokedex-selector">
-                <div class="inner-pokedex-selector" id="pokedex-selector">
+            <div>
+                <input type="text" placeholder="Pokémon" onkeyup="searchPokemon()" id="searchBar">
+                <div class="pokedex-selector">
+                    <div class="inner-pokedex-selector" id="pokedex-selector">
+                    </div>
                 </div>
             </div>
         </div>
     </main>
     <script src="assets/js/pokemon.js"></script>
+    <script src="assets/js/searchPokemon.js"></script>
+    <script src="assets/js/dedicatedPokemon.js"></script>
 </body>
 </html>

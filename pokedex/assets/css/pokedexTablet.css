@@ -3,6 +3,50 @@
     align-items: center;
 }
 
+.camera{
+    background-color: blue;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    border: 3px solid #FFF;
+    align-self: flex-start;
+    display: inline-block;
+}
+
+.top-pokedex-screen{
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.three-cameras{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.red,
+.blue,
+.yellow{
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    border: 2px solid #FFF;
+}
+
+.red{
+    background-color: rgb(63, 18, 18);
+}
+.blue{
+    background-color: blue;
+}
+.yellow{
+    background-color: yellow;
+}
+
 .inner-pokedex{
     width: 500px;
     height: 500px;
@@ -10,6 +54,7 @@
     border: 2px solid #000;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -17,6 +62,7 @@
 .pokedex-screen{
     width: 90%;
     height: 90%;
+    margin: 1rem;
     background: #fff;
     border-radius: 10px;
     display: flex;
@@ -26,7 +72,7 @@
 
 .pokedex-selector{
     background: red;
-    width: 50%;
+    width: 100%;
     border: 2px solid #000;
     display: flex;
     flex-direction: column;
@@ -34,8 +80,9 @@
     align-items: center;
 }
 
+
 .inner-pokedex-selector{
-    background: #FFF;
+    background: #000;
     width: 220px;
     height: 300px;
     margin: 10px;
@@ -60,4 +107,57 @@
 
 .pokemon-selected-img{
     width: 60%;
+}
+
+/*Pokémons dentro da tela de seleção*/
+.pokemon-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid #0f1214
+}
+
+.pokemon-name{
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.pokemon-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width: 900px){
+
+    .pokedex{
+        flex-direction: column;
+    }
+
+    .inner-pokedex{
+        width: 80%;
+    }
+
+    /* .pokedex-screen{
+        width: 50%;
+    } */
+
+    .pokedex-selector{
+        width: fit-content;
+        flex-direction: row;
+        width: 80%;
+    }
+
+    .inner-pokedex-selector{
+        overflow-y: hidden;
+        overflow-x: scroll;
+        display: inline-flex;
+        height: 100%;
+        width: 300px;
+    }
+
+    .pokemon-div{
+        width: 300px;
+    }
 }

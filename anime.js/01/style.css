@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica";
+}
+.square{
+    background-color: rgb(97, 30, 30);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    outline: 1px solid white;
+}
+.demo{
+    width: 50%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+body{
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

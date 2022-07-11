@@ -18,7 +18,12 @@ async function getPokemon(id){
     const specialDefense = pokemon.stats[4].base_stat;
     const speed = pokemon.stats[5].base_stat;
     const sprite = pokemon.sprites.front_default;
-    const type = pokemon.types[0].type.name;
+    const type = [];
+
+    //Para poder pegar todos os tipos dos pokemons
+    for(let i = 0; i < pokemon.types.length; i++){
+        type.push(pokemon.types[i].type.name);
+    }
 
     return {name, hp, attack, defense, specialAttack, specialDefense, speed, sprite, type}
 }
@@ -39,7 +44,7 @@ async function createPokemon(){
         pokemonImg.src = pokemon.sprite;
 
         //adicionando as classes de estilização
-        pokemonContainerDiv.classList.add("pokemon-container", `${pokemon.type}`);
+        pokemonContainerDiv.classList.add("pokemon-container", `${pokemon.type[0]}`);
         pokemonContainerDiv.id = `${pokemon.name}`
         pokemonName.classList.add("pokemon-name");
         pokemonDiv.classList.add("pokemon-div");
@@ -59,7 +64,6 @@ async function createPokemon(){
 
 createPokemon();
 
-
 function getDivs(){
     
     const pokemonDivArr = document.getElementsByClassName('pokemon-container');
@@ -77,21 +81,31 @@ async function getSpecificPokemon(){
 
 function showSelectedPokemon(name, sprite, stats, type){
 
+    let pokemonTypes = '';
+
+    if(type.length >= 1){
+        pokemonTypes += type.join(" | ");
+    }else{
+        pokemonTypes = `${type[0]}`
+    }
+    
     const div = 
     `<div class="pokemon-selected-screen">
         <div class="selected-name-div">
             <h1 class="pokemon-selected-name">${name}</h1>
-            <p>${type}</p>
+            <p class='pokemon-types'>${pokemonTypes}</p>
         </div>
         <img src="${sprite}" alt="${name}" class="pokemon-selected-img">
-        <div class="pokemon-selected-stats">
+        <div id="pokemon-selected-stats">
             <p>Attack: ${stats[0]}</p>
             <p>Defense: ${stats[1]}</p>
         </div>
-        
     </div>`;
 
+
     const pokedexScreen = document.getElementById('pokedex-screen');
+    
     pokedexScreen.innerHTML = div;
 }
 
+console.log("Finished");
