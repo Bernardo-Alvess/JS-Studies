@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+    color: #FFF;
+}
+
+body{
+    background: #1F2440;
+    height: 100vh;
+}
+
+header{
+    margin: 0 auto;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+header h1{
+    font-size: 3em;
+    color: #F2CF8D;
+}
+
+
+header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+header a{
+    text-decoration: none;
+    border: 1px solid #464AA6;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+header a:hover{
+    background-color: #3B3F8C;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    height: 90%;
+}
+
+#coordinates{
+    background: #292759;
+    padding: 20px;
+    width: 600px;
+    height: 250px;
+    border-radius: 10px;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    outline: 1px solid #464AA6;
+}
+
+#check-in{
+    background: #292759;
+    width: 200px;
+    padding: 20px;
+    border-radius: 100vh;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    outline: 1px solid #3B3F8C;
+}
+
+#check-in:hover{
+    color: #F2CF8D;
+    background-color: inherit;
+}

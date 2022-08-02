@@ -18,13 +18,27 @@ body{
 }
 
 .carrousel button{
-    padding: 10px;
     border: none;
     background-color: inherit;
     color: #FFF;
     font-size: 2em;
     transition: 1s;
     cursor: pointer;
+}
+
+.fa-chevron-right,
+.fa-chevron-left{
+    text-shadow: 0 0 10px #000;
+}
+
+#previous{
+    position: relative;
+    left: 30px;
+}
+
+#next{
+    position: relative;
+    right: 30px;
 }
 
 .carrousel button:hover{
