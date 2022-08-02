@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "chalk": "^5.0.1"
+  },
+  "name": "alg",
+  "version": "1.0.0",
+  "description": "making javascript algorithms",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "Bernardo Alves",
+  "license": "MIT"
+}

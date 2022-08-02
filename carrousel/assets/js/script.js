@@ -1,32 +1,3 @@
-// const nextImage = (imagesArr) => {
-//     const display = document.getElementById('display');
-//     let path = display.src.substring(22, display.src.length);
-//     let currentImage = imagesArr.indexOf(path);
-//     if(currentImage == imagesArr.length - 1){
-//         display.src = imagesArr[0];
-//     }else{
-//         display.src = imagesArr[currentImage + 1]
-//     }
-// }
-
-// const previousImg = (imagesArr) =>{
-//     const display = document.getElementById('display');
-//     let path = display.src.substring(22, display.src.length);
-//     let currentImage = imagesArr.indexOf(path);
-//     if(currentImage == 0){
-//         display.src = imagesArr[imagesArr.length - 1];
-//     }else{
-//         display.src = imagesArr[currentImage - 1]
-//     }
-// }
-
-// const images = ['assets/imgs/zoro.jpg', 'assets/imgs/kimetsu.jpg', 'assets/imgs/jujutsu.jpg'];
-
-// document.getElementById('next').addEventListener('click', function() {nextImage(images)});
-// document.getElementById('previous').addEventListener('click', function(){previousImg(images)});
-
-
-
 const changeImages = (images, mode) => {
     const display = document.getElementById('display');
     const currentImage = display.getAttribute('src');
@@ -47,12 +18,32 @@ const changeImages = (images, mode) => {
             }
             break;
     }
+    
 }
 
-const images = ['assets/imgs/zoro.jpg', 'assets/imgs/kimetsu.jpg', 'assets/imgs/jujutsu.jpg'];
+const images = ['assets/imgs/zoro.jpg', 'assets/imgs/kimetsu.jpg', 'assets/imgs/jujutsu.jpg', 'assets/imgs/berserk.jpg', 'assets/imgs/shingeki.jpg'];
 
 const nextImageButton = document.getElementById('next');
 const previousImageButton = document.getElementById('previous');
 
-nextImageButton.addEventListener('click', function() {changeImages(images, 'next')});
-previousImageButton.addEventListener('click', function(){changeImages(images, 'previous')});
+nextImageButton.addEventListener('click', () =>{
+    changeImages(images, 'next');
+    anime({
+        targets: '#next',
+        translateX: 300,
+        duration: 50,
+        direction: 'alternate',
+        easing: 'easeInOutElastic'
+    })
+})
+previousImageButton.addEventListener('click', () =>{
+    changeImages(images, 'previous');
+    anime({
+        targets: '#previous',
+        translateX: -300,
+        duration: 50,
+        direction: 'alternate',
+        easing: 'easeInOutElastic'
+    })
+})
+
