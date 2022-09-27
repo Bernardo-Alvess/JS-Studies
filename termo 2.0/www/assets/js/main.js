@@ -22,18 +22,18 @@ function makeKeyboard(){
     for(let i = 0; i < keys.length; i++){
         const div = document.createElement('div')
         if(i <= 9){
-            div.classList.add('letra')
-            div.dataset.key=`${key}`
+            div.classList.add('keyboardLetter')
+            div.dataset.key=`${keys[i]}`
             div.textContent = keys[i]
             firstRow.appendChild(div)
         }else if(i <= 18){
-            div.classList.add('letra')
-            div.dataset.key=`${key}`
+            div.classList.add('keyboardLetter')
+            div.dataset.key=`${keys[i]}`
             div.textContent = keys[i]
             secondRow.appendChild(div)
         }else{
-            div.classList.add('letra')
-            div.dataset.key=`${key}`
+            div.classList.add('keyboardLetter')
+            div.dataset.key=`${keys[i]}`
             div.textContent = keys[i]
             thirdRow.appendChild(div)
         }
