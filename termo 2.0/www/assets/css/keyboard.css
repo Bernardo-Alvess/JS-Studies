@@ -2,6 +2,7 @@
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0.6rem;
+    margin-bottom: 10rem;
 }
 
 .row{
@@ -15,12 +16,12 @@
     background-color: #4C4347;
     color: #FFF;
     font-size: 1.2em;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 10px;
 }
 
-@media(max-height: 900px){
+@media(max-height: 700px){
     .keyboardLetter{
-        padding: 0.5rem;
+        padding:1rem;
     }
 }

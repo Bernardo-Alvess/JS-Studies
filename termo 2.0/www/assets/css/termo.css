@@ -2,6 +2,14 @@
     margin: 2rem;
 }
 
+.active .letra{
+    outline: 3px solid #4C4347;
+    margin: 2px;
+}
+.active{
+    padding: 10px;
+}
+
 .linha{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

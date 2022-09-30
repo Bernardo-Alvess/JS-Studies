@@ -40,3 +40,7 @@ main{
 .green{
     background-color: #3AA394 !important;
 }
+
+.opaque{
+    opacity: 50%;
+}
