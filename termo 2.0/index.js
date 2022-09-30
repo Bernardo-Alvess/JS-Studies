@@ -17,11 +17,11 @@ app.get('/word', async (req, res) => {
 app.post('/verify', async (req, res) => {
     const verification = await words.doesWordExist(req.body.wordTyped)
     console.log(verification)
-    if(Array.isArray(verification)){
+    if(verification){
         console.log(1)
-        res.send({"result": '1'})
+        res.send(true)
     }else{
         console.log(0)
-        res.send({"result": '0'})
+        res.send(false)
     }
 })

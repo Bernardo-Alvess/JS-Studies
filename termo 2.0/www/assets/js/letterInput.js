@@ -19,23 +19,22 @@ function getLetter(e){
         populate(activeDiv)
     }
     else if(key === 'Enter' && letterCount === 5){
-        if(checkWord()){
-            alert('ACERTOU')
-        }else{
-            changeRows(activeDiv)
+        // if(checkWord()){
+        //     alert('ACERTOU')
+        // }else{
+        //     changeRows(activeDiv)
+        // }
+        const validate = isValidWord(wordTyped)
+        console.log(validate.body, validate)
+        if(validate){
+            if(checkWord()){
+                alert('ACERTOU')
+            }else{
+                changeRows(activeDiv)
+            }
         }
-    //     const validate = isValidWord(wordTyped)
-   
-    //     console.log(validate.result, validate)
-    //     if(validate.result === '1'){
-    //         if(checkWord()){
-    //             alert('ACERTOU')
-    //         }else{
-    //             changeRows(activeDiv)
-    //         }
-    //     }
         
-    //     console.log('fahjkl')
+        console.log('fahjkl')
     }
     else if(!filterKeys(key) && words[rowIndex].length != 5){
         words[rowIndex].push(key);

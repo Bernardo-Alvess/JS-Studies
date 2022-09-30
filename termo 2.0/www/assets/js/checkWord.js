@@ -50,7 +50,7 @@ async function isValidWord(wordTyped){
         }
     }
     const response = await fetch('/verify', OPTIONS)
-    const isValid = await response.json()
+    const isValid = await response.text()
     console.log(typeof(isValid))
     return isValid
 }
