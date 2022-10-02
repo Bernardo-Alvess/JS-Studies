@@ -10,31 +10,24 @@ const words = [
     []
 ]
 
-function getLetter(e){
+async function getLetter(e){
     let activeDiv = getActiveDiv();
-    console.log(activeDiv)
     const key = e.key
     if(key == 'Backspace' && letterCount != 0){
         removeLetter(activeDiv)
         populate(activeDiv)
     }
     else if(key === 'Enter' && letterCount === 5){
-        // if(checkWord()){
-        //     alert('ACERTOU')
-        // }else{
-        //     changeRows(activeDiv)
-        // }
-        const validate = isValidWord(wordTyped)
-        console.log(validate.body, validate)
-        if(validate){
-            if(checkWord()){
-                alert('ACERTOU')
-            }else{
+        const validate = await isValidWord(wordTyped)
+        if(validate == 'true'){
+            rotateLetter(activeDiv)
+            if(!checkWord()){
                 changeRows(activeDiv)
             }
+        }else{
+            shakeTermo(activeDiv)
+            return
         }
-        
-        console.log('fahjkl')
     }
     else if(!filterKeys(key) && words[rowIndex].length != 5){
         words[rowIndex].push(key);
@@ -47,7 +40,6 @@ function getLetter(e){
 }
 
 function removeLetter(activeDiv){
-    console.log(words, wordTyped)
     words[rowIndex].pop()
     letterCount--
     wordTyped[letterCount] = ''

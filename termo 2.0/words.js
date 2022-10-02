@@ -2,41 +2,41 @@ const fs = require('fs')
 const express = require('express')
 const fetch = require('node-fetch')
 
-const selectRandomWord = () => {
-    const file = fs.readFileSync('www/assets/palavras/escrever.txt', 'utf-8')
+const readFileToArray = (fileDir) => {
+    const file = fs.readFileSync(fileDir, 'utf-8')
     const arr = []
     
     file.split(/\r?\n/).forEach(line => {
         arr.push(line)
     })
 
+    return arr
+}
+
+const selectRandomWord = () => {
+    const arr = readFileToArray('www/assets/palavras/lista.txt')
     const randomNumber = Math.floor(Math.random() * 242)
-    const gameWord = arr[randomNumber]
+    let gameWord;
+    
+    do{
+        gameWord = arr[randomNumber]
+    }while(gameWord.length == 4)
+
     return gameWord
 }
 
 
 const doesWordExist = async (palavra) => {
     const word = palavra.join('')
-    const file = fs.readFileSync('www/assets/palavras/dicio.txt', 'utf-8')
-    const arr = []
-    
-    file.split(/\r?\n/).forEach(line => {
-        arr.push(line)
-    })
+    const arr = readFileToArray('www/assets/palavras/lista.txt')
 
     let bool = arr.includes(word)
 
     if(bool){
-        console.log('manito')
         return true
     }else{
         return false
     }
-
-    // const response = await fetch(`https://significado.herokuapp.com/v2/sinonimos/${palavra}`)
-    // const json = await response.json()
-    // return json
 }
 
 

@@ -41,6 +41,10 @@ main{
     background-color: #3AA394 !important;
 }
 
+.black{
+    background-color: #312A2C !important
+}
+
 .opaque{
     opacity: 50%;
 }

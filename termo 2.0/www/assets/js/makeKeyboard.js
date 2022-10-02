@@ -29,7 +29,7 @@ function makeKeyboard(){
 makeKeyboard()
 
 function updateKeyboard(validArr, invalidArr, IncorrectArr){
-
+    console.log('update colors')
     changeKeyboardColor(validArr, 'green', '#firstRow')
     changeKeyboardColor(invalidArr, 'opaque', '#secondRow')
     changeKeyboardColor(IncorrectArr, 'yellow', '#thirdRow')
@@ -41,12 +41,4 @@ function changeKeyboardColor(arr, color, row){
         let keyboardLetter = document.querySelector(`.${arr[i]}`)
         keyboardLetter.classList.add(color)
     }
-
-    // for(let i = 0; i < arr.length; i++){
-    //     // console.log(row.children[i].dataset.key)
-    //     console.log(arr[i],row.children[i].dataset.key)
-    //     if(row.children[i].dataset.key == arr[i]){
-    //         console.log(row[i].dataset.key, arr[i])
-    //     }
-    // }
 }

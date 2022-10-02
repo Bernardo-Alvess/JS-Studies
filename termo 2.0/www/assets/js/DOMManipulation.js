@@ -20,3 +20,13 @@ function populate(activeDiv){
         letters[i].textContent = wordTyped[i]
     }
 }
+
+function gameWin(activeDiv){
+    const row = activeDiv.dataset.row
+    console.log(row)
+    alert(`Parabéns, você acertou a palavra: ${word} na linha ${parseInt(row) + 1}`)
+}
+
+function gameLost(){
+    alert(`Infelizmente não foi dessa vez. \nA palavra era: ${word}`)
+}

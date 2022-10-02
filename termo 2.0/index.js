@@ -16,7 +16,6 @@ app.get('/word', async (req, res) => {
 
 app.post('/verify', async (req, res) => {
     const verification = await words.doesWordExist(req.body.wordTyped)
-    console.log(verification)
     if(verification){
         console.log(1)
         res.send(true)
